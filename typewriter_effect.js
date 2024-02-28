@@ -33,7 +33,7 @@ TxtType.prototype.tick = function() {
                 that.cursorAdded = false; // Reset cursor logic for the next cycle
                 that.tick();
             }, 500); // Ensure this matches CSS animation duration
-        }, this.period); // Pause with cursor blinking before fade-out
+        }, this.period + 5000); // Pause with cursor blinking before fade-out
     } else if (!this.isFading) {
         setTimeout(function() {
             that.tick();
